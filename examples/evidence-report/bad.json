@@ -1,0 +1,16 @@
+{
+  "result": "全部檢查過了，沒有問題。",
+  "claims": [
+    {
+      "text": "所有套件都沒有漏洞",
+      "level": "verified",
+      "status": "happened"
+    },
+    {
+      "text": "攻擊者已經利用這個漏洞入侵網站",
+      "level": "inferred",
+      "status": "happened",
+      "basis": "漏洞很嚴重"
+    }
+  ]
+}

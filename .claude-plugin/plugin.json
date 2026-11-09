@@ -1,0 +1,10 @@
+{
+  "name": "metacognitive-harness",
+  "version": "0.1.0",
+  "description": "讓 Agent 知道自己做了什麼、確定到什麼程度：界定範圍、前置檢查、寫入後讀回、證據分級回報、獨立審查。",
+  "author": {
+    "name": "Jeffery Liu"
+  },
+  "repository": "https://github.com/jeffery8910/agent-harness-metacognition",
+  "keywords": ["metacognition", "verification", "workflow", "hooks"]
+}

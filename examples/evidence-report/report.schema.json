@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "證據分級回報（R8）",
+  "description": "要求 Agent 或子 Agent 以這個格式回報，再用 check_evidence.py 檢查。",
+  "type": "object",
+  "required": ["result", "claims", "unverified_scope"],
+  "properties": {
+    "result": { "type": "string", "description": "一句話說完成了什麼" },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["text", "level"],
+        "properties": {
+          "text": { "type": "string" },
+          "level": { "enum": ["verified", "inferred", "unverified"] },
+          "status": { "enum": ["happened", "possible"], "description": "已經發生，或只是可能發生" },
+          "sources": { "type": "array", "items": { "type": "string" }, "description": "verified 必填" },
+          "basis": { "type": "string", "description": "inferred 必填：推論依據" },
+          "reason": { "type": "string", "description": "unverified 必填：為什麼沒驗證" }
+        }
+      }
+    },
+    "unverified_scope": {
+      "type": "array",
+      "description": "必填，可以是空陣列",
+      "items": {
+        "type": "object",
+        "required": ["what", "why", "how_to_check"],
+        "properties": {
+          "what": { "type": "string" },
+          "why": { "type": "string" },
+          "how_to_check": { "type": "string" }
+        }
+      }
+    }
+  }
+}

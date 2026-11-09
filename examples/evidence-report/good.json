@@ -1,0 +1,24 @@
+{
+  "result": "SolveMate 的相依套件都已是最新安全版本，這次沒有改任何檔案。",
+  "claims": [
+    {
+      "text": ".NET 執行環境 aspnet:10.0.14 是目前最新版",
+      "level": "verified",
+      "status": "happened",
+      "sources": ["https://builds.dotnet.microsoft.com/dotnet/release-metadata/10.0/releases.json"]
+    },
+    {
+      "text": "11 月例行更新後很可能會有新的 .NET 10.0.x",
+      "level": "inferred",
+      "status": "possible",
+      "basis": "微軟固定在每月第二個星期二發布安全更新"
+    }
+  ],
+  "unverified_scope": [
+    {
+      "what": "NuGet 間接相依套件的漏洞",
+      "why": "沙盒連不到 NuGet，無法還原套件",
+      "how_to_check": "在專案資料夾執行 dotnet list package --vulnerable --include-transitive"
+    }
+  ]
+}

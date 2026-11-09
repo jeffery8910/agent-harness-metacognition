@@ -1,0 +1,13 @@
+{
+  "name": "jeffery-harness",
+  "owner": {
+    "name": "Jeffery Liu"
+  },
+  "plugins": [
+    {
+      "name": "metacognitive-harness",
+      "source": "./",
+      "description": "後設認知工作流：skill、驗證 hooks 與獨立審查 agent。"
+    }
+  ]
+}
